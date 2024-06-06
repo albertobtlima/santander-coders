@@ -3,23 +3,49 @@
   padding: 0;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 h1 {
   color: #0000ff; 
   text-align: center;
-  font-size: 42px;
+  font-size: 9.6rem;
   background-color: aqua;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: "Comic Neue", cursive;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-style: italic;
   text-decoration: underline;
 }
 
+a {
+  font-size: 2.4rem;
+}
+
+a:visited {
+  color: red;
+}
+
+a:hover {
+  color: coral;
+}
+
 p {
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: justify;
+  text-indent: 50px;
+}
+
+.novo-em {
+  font-size: 200%;
+}
+
+.novo-em h2 {
+  font-size: 3.2em;
 }
 
 .bg {
