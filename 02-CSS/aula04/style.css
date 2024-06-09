@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.bg {
+    height: 500px;
+    width: 100%;
+    background-color: #555;
+    background-image: url("https://images.unsplash.com/photo-1496535731694-9673400f50c9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main {
+    /* padding: 7rem 0; */
+}
+.boxes {
+    /* height: calc(100vh - 14rem); */
+    height: 100vh;
+    position: relative;
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 2rem 5rem;
+}
+
+.box {
+    min-height: 10rem;
+    min-width: 20rem;
+    padding: 1.5rem;
+    border: 10px solid red;
+    border-radius: 0.5rem;
+    background-color: blue;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    order: 1;
+    /* flex-basis: calc(50% - 5rem); */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0 2rem;
+}
+
+.box:nth-child(3) {
+    order: 2;
+    flex: 2;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table tr:first-child {
+    background-color: steelblue;
+    color: #fff;
+}
+
+table tr:nth-child(2n + 2) {
+    background-color: #999;
+}
+
+table {
+    font-size: 2.4rem;
+    border-collapse: separate;
+}
+
+a {
+    display: block;
+    background: steelblue;
+    color: #fff;
+    border: none;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    transition: .2s ease-in-out, background-color 1s ease-in-out;
+}
+
+[data-anchar="products"] {
+    /* transform: scale(2) rotate(30deg);
+    opacity: 0;
+    display: none;
+    visibility: hidden; */
+}
+
+[data-anchar="products"]:hover {
+    transform: scale(1.2);
+    background-color: aqua;
+    color: red;
+}
+
+[data-anchar="team"] {
+    margin-top: 2rem;
+    animation: pulse 2s infinite;
+    animation-direction: alternate;
+    transform: scale(1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: .7;
+    }
+}
+
+#companies-table {
+    /* display: none; */
+}
+
+[data-company="GCO"] {
+    background-color: aqua;
+}
+
+@media screen and (max-width: 767px) {
+    table {
+        display: none;
+    }
+    h1 {
+        color: red;
+    }
+} 
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .bg {
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .bg {
+        height: 50vh;
+    }
+}
+
+@media print {
+    .bg {
+        display: none;
+    }
+}
