@@ -1,10 +1,19 @@
-const idadePessoa1 = 15;
-const idadePessoa2 = 39;
+const prompt = require("readline-sync");
 
-console.log(idadePessoa1 > 18);
-console.log(idadePessoa2 > 18);
-console.log(idadePessoa1 >= 18 && idadePessoa2 >= 18);
-console.log(idadePessoa1 >=18 || idadePessoa2 >= 18);
+let cnh;
+let temCnh;
+const idade2 = Number(prompt.question("Qual é a sua idade? "));
+const ehMaiorDeIdade2 = idade2 >= 18;
 
-console.log(!true);
-console.log(!(idadePessoa1 > 18));
+if (ehMaiorDeIdade2) {
+    cnh = Number(prompt.question("Você possui CNH? [1 sim][2 não] "));
+    temCnh = cnh === 1;
+} else {
+    console.log("Apenas maiores de idade podem dirigir.")
+}
+
+if (ehMaiorDeIdade2 && temCnh) {
+    console.log("Você pode dirigir.");
+} else {
+    console.log("Você não pode dirigir.");
+}
