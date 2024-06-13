@@ -1,8 +1,9 @@
 import React from "react";
-import "./styles/App.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Article } from "./components/Article/Article";
+import { Counter } from "./components/Counter/Counter";
 
+import "./styles/App.css";
 import artcle1Img from "./assets/images/article1.png";
 import artcle2Img from "./assets/images/article2.png";
 import artcle3Img from "./assets/images/article3.png";
@@ -16,6 +17,9 @@ class App extends React.Component {
     return (
       <>
         <Navbar />
+
+        <Counter />
+
         <section id="articles">
           <Article 
             title="Designing Dashboards"
